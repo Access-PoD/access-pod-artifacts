@@ -50,9 +50,15 @@ They are **not** a certification program and do **not** constitute regulatory gu
 
 ## Integrity and Versioning
 
-- Releases should include a `manifest.json` listing all artifacts and SHA-256 checksums.
-- Do not change the meaning of an existing `metric_id`. Deprecate and introduce a new `metric_id` if needed.
-- Keep Version A artifacts stable; Version B should extend via `_future_extensions/`.
+Releases include a manifest file (`manifest_v1a.json`) that enumerates all normative artifacts and their associated SHA-256 checksums. Integrity verification must be performed against the individual files and hashes listed in the manifest.
+
+The v1a release is anchored to a tagged commit. Subsequent commits on the `main` branch are non-normative and are intended for clarification, documentation improvements, or preparation for future revisions (e.g., v1b). Normative scope for v1a is defined exclusively by the manifest.
+
+Do not change the meaning of an existing `metric_id`. If a change in semantics is required, deprecate the existing identifier and introduce a new `metric_id`.
+
+Version A artifacts are intended to remain stable for the duration of the public review cycle. Version B and later revisions should extend functionality via the `_future_extensions/` directory without modifying Version A artifacts.
+
+GitHub-generated source archives (ZIP / TAR.GZ) are provided for convenience only and are not normative. They must not be relied upon for validation or integrity checking.
 
 ---
 

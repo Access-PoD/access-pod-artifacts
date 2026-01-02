@@ -1,212 +1,201 @@
-Access PoD — Future Extensions
-Volume 2, Version B (v1b)
-Architecture-Specific Governance Artifacts
+# Access PoD — Future Extensions  
+## Volume 2 · Version B (v1b)  
+### Architecture-Specific Governance Artifacts
 
-Extension identifier: APOD-TR-003 — v1b
-Status: Public Review Draft (Standards Exploration)
-Relationship: Additive extension to Volume 2, Version A
-Initiative: Policy of Developments — Access PoD
+**Extension identifier:** APOD-TR-003 — v1b  
+**Status:** Public Review Draft (Standards Exploration)  
+**Relationship:** Additive extension to Volume 2, Version A  
+**Initiative:** Policy of Developments — Access PoD
 
-1. Purpose of this folder
+---
 
-This folder contains Version B (v1b) future extension artifacts for the Access PoD governance framework.
+## 1. Purpose of this folder
 
-Note on Version B paper status:
-The Version B paper (Second Edition — Architecture-Specific Extension) is under active review and is not yet publicly released at the time of this artifact publication.
+This directory contains **Version B (v1b) future extension artifacts** for the Access PoD governance framework.
 
-This v1b release contains artifacts only, published to support early standards, regulatory, and architectural review. The Version B paper will be released separately once finalized.
+> **Note on Version B paper status**  
+> The Version B paper (Second Edition — Architecture-Specific Extension) is under active review and **is not yet publicly released** at the time of this artifact publication.
 
-Version B provides an architecture-specific instantiation of the model-agnostic governance framework defined in Volume 2, Version A, using Q-Pathformer as a reference execution substrate.
+This v1b release contains **artifacts only**, published to support early standards, regulatory, and architectural review.  
+The Version B paper will be released separately once finalized.
+
+Version B provides an **architecture-specific instantiation** of the **model-agnostic governance framework defined in Volume 2, Version A**, using **Q-Pathformer as a reference execution substrate**.
 
 This folder exists to ensure that:
 
-Version A artifacts remain stable and authoritative
+- Version A artifacts remain **stable and authoritative**
+- Extensions can be reviewed and evolved **without modifying the baseline**
+- Standards bodies and regulators can evaluate **execution-level feasibility** without conflating authority
+- Nothing in this folder redefines governance semantics, assurance scoring, or conformance rules defined in Version A
 
-Extensions can be reviewed, evolved, and iterated without modifying the baseline
+---
 
-Standards bodies and regulators can evaluate execution-level feasibility without conflating authority
+## 2. What Version B *is* (and *is not*)
 
-Nothing in this folder redefines governance semantics, assurance scoring, or conformance rules defined in Version A.
+### What Version B **is**
+- An **illustrative, architecture-specific extension**
+- A demonstration of how governance attaches at **execution boundaries**
+- Evidence that **continuous, revocable assurance** can operate at runtime
+- A structured **artifact set** for standards and regulatory review
 
-2. What Version B is (and is not)
-What Version B is
+### What Version B **is not**
+- A certification scheme  
+- A conformity assessment  
+- A compliance declaration  
+- A mandatory architecture  
+- A security or cryptography specification  
+- An onboarding or deployment guide  
 
-Version B is:
+> Adoption or non-adoption of Version B artifacts **does not affect conformance** to Version A.
 
-an illustrative, architecture-specific extension
+---
 
-a demonstration of how governance attaches at execution boundaries
+## 3. Folder structure and authority model
 
-a proof that continuous, revocable assurance can operate at runtime
-
-a structured artifact set for standards and regulatory review
-
-What Version B is not
-
-Version B is not:
-
-a certification scheme
-
-a conformity assessment
-
-a compliance declaration
-
-a mandatory architecture
-
-a security or cryptography specification
-
-an onboarding or deployment guide
-
-Adoption or non-adoption of Version B artifacts does not affect conformance to Version A.
-
-3. Folder structure and authority model
-
-The v1b extension is intentionally structured to separate authority, interpretation, and operational guidance.
+The v1b extension is intentionally structured to separate **authority**, **interpretation**, and **operational guidance**.
 
 _future_extensions/
-  v1b/
-    README.md
-    manifest_v1b.json
+v1b/
+README.md
+manifest_v1b.json
 
-    native/
-      json/
-        (authoritative, machine-readable governance artifacts)
+pgsql
+Copy code
+native/
+  json/
+    (authoritative, machine-readable governance artifacts)
 
-    non_native/
-      json/
-        (expanded or interpretive matrices)
+non_native/
+  json/
+    (expanded or interpretive matrices)
 
-    norms/
-      eu_ai_act/
-        annex_vii/
-          (EU AI Act alignment checklists and mappings)
-      iso/
-        (future ISO alignment notes)
+norms/
+  eu_ai_act/
+    annex_vii/
+      (EU AI Act alignment checklists and mappings)
+  iso/
+    (future ISO alignment notes)
 
-    exec_ops/
-      board/
-      operator/
-      regulator/
+exec_ops/
+  board/
+  operator/
+  regulator/
+yaml
+Copy code
 
-4. Native vs non-native artifacts
-4.1 Native governance artifacts (authoritative)
+---
 
-Artifacts in native/ are:
+## 4. Native vs non-native artifacts
 
-machine-readable
+### 4.1 Native governance artifacts (authoritative)
 
-schema-validated
+Artifacts under `native/` are:
 
-scope-bound and time-bound
+- Machine-readable  
+- Schema-validated  
+- Scope-bound and time-bound  
+- The **single source of truth** for governance state and assurance  
 
-the single source of truth for governance state and assurance
-
-If a discrepancy exists between artifacts, native artifacts always take precedence.
+If a discrepancy exists, **native artifacts always take precedence**.
 
 Native artifacts are suitable for:
+- Automated tooling
+- Regulator ingestion
+- Assurance validation
+- Cross-system interoperability
 
-automated tooling
+### 4.2 Non-native artifacts (interpretive)
 
-regulator ingestion
+Expanded Annex VII mapping files are provided under `non_native/json/` **for review convenience**.
 
-assurance validation
-
-cross-system interoperability
-
-4.2 Non-native artifacts (interpretive)
-
-Expanded Annex VII mapping files are provided under non_native/json/ for review convenience.
-
-Artifacts in non_native/ are:
-
-expanded, human-readable, or review-oriented
-
-provided to aid understanding, readiness, and discussion
-
-never authoritative
+Artifacts under `non_native/` are:
+- Expanded or human-readable
+- Provided to aid understanding, readiness, and discussion
+- **Never authoritative**
 
 They must not be presented as governance evidence or used to substitute missing native artifacts.
 
-5. Norm-specific alignment folders
+---
 
-The norms/ directory groups artifacts by regulatory or standards language, not by authority.
+## 5. Norm-specific alignment folders
+
+The `norms/` directory groups artifacts by **regulatory or standards language**, not by authority.
 
 Examples include:
+- EU AI Act Annex VII readiness checklists
+- Future ISO/IEC 42001 or ISO/IEC 27001 alignment notes
 
-EU AI Act Annex VII readiness checklists
+These folders:
+- Do not redefine governance
+- Do not introduce new requirements
+- Exist to support **proportional, regulator-friendly interpretation**
 
-future ISO/IEC 42001 or ISO/IEC 27001 alignment notes
+Canonical governance artifacts always remain in `native/`.
 
-Norm folders:
+---
 
-do not redefine governance
+## 6. Executive and operational guidance
 
-do not introduce new requirements
+The `exec_ops/` directory contains **human-facing guidance** for:
 
-exist to support proportional, regulator-friendly interpretation
+- Boards and risk committees
+- Operators and governance leads
+- Regulators and standards reviewers
 
-Canonical governance artifacts always remain in native/.
+These documents explain **how to engage, how to interpret, and how to communicate** —  
+they **do not represent governance state** and are explicitly **informative and non-normative**.
 
-6. Executive and operational guidance
+---
 
-The exec_ops/ directory contains human-facing guidance for:
+## 7. Manifests and integrity
 
-boards and risk committees
+Each extension release includes its own manifest (e.g. `manifest_v1b.json`) that:
 
-operators and governance leads
+- Enumerates included artifacts
+- Records hashes and metadata
+- Establishes review integrity
 
-regulators and standards reviewers
+Manifests are **extension-scoped** and do not modify or replace the root (Version A) manifest.
 
-These documents explain how to engage, how to interpret, and how to communicate — but they do not represent governance state.
+---
 
-They are explicitly informative and non-normative.
+## 8. Relationship to other versions
 
-7. Manifests and integrity
+### Version A (root of repository)
+Defines the **authoritative, model-agnostic governance framework**.  
+The stable Version A Public Review Draft is available at:  
+https://policyofdevelopments.org/whitepaper/vol2-a-web-of-sharing-trust-responsibility-toward-a-trustless-future
 
-Each extension release includes its own manifest (e.g. manifest_v1b.json) that:
+### Version B (this folder)
+Demonstrates **execution-level feasibility** using a reference architecture.
 
-enumerates included artifacts
-
-records hashes and metadata
-
-establishes review integrity
-
-Manifests are extension-scoped and do not modify or replace the root manifest.
-
-8. Relationship to other versions
-
-Version A (root of repository)
-Defines the authoritative, model-agnostic governance framework.
-The stable Version A Public Review Draft is available at: https://policyofdevelopments.org/whitepaper/vol2-a-web-of-sharing-trust-responsibility-toward-a-trustless-future
-
-Version B (this folder)
-Demonstrates execution-level feasibility using a reference architecture.
-
-Version C (future)
-Will address onboarding and operational mechanics without redefining governance authority.
+### Version C (future)
+Will address onboarding and operational mechanics **without redefining governance authority**.
 
 Each version is reviewed independently and does not retroactively alter prior versions.
 
-9. Canonical source
+---
+
+## 9. Canonical source
 
 The canonical public review distribution for Version B artifacts is published via GitHub releases under:
 
 _future_extensions/v1b/
 
+yaml
+Copy code
+
 Only artifacts listed in the corresponding manifest should be considered part of the official v1b release.
 
-10. Disclaimer
+---
+
+## 10. Disclaimer
 
 Artifacts in this folder:
 
-do not certify systems
+- Do **not** certify systems  
+- Do **not** assert regulatory compliance  
+- Do **not** replace legal or sector-specific obligations  
+- Must **not** be used to claim approval or authorization  
 
-do not assert regulatory compliance
-
-do not replace legal or sector-specific obligations
-
-must not be used to claim approval or authorization
-
-They are provided to support transparent, evidence-based discussion of runtime AI governance.
-
-This README intentionally mirrors the structure and tone of the root README while making the extension boundary explicit. It is suitable for standards bodies, regulators, and open-source reviewers.
+They are provided solely to support **transparent, evidence-based discussion** of runtime AI governance.

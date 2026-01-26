@@ -1,107 +1,188 @@
-# Access PoD — Volume 2 Artifact Pack (Version A)
+# Designing Governance-Ready AI Outputs  
+## Structured Thinking, Evidence, and Reporting for RegTech Professionals
 
-Document ID: APOD-TR-002  
-Status: Public Review Draft (Standards Exploration)
+This repository contains a **governance thinking and writing framework** for professionals
+who must sign off on AI-related governance outputs.
 
-This repository hosts the **canonical Version A artifact pack** referenced by the Volume 2 Public Review Draft.
+It is designed for:
+- AI governance and risk professionals  
+- policy and standards contributors  
+- assurance, compliance, and regtech leads  
+- technical authors operating in regulated contexts  
 
-Scope: **Version A** — model-agnostic, execution-independent governance artifacts supporting the Volume 2 paper.
+The framework supports **structured reasoning, evidence discipline, and accountability**
+when using AI as a *supporting system*, not a decision-maker.
 
-The original Version A publication is included in the Version A artifact pack ZIP as:
-APOD-TR-002_A-WEB-of-Sharing-Trust-Responsibility_Vol2_Version-A_Public-Review.pdf
+---
 
-This repository contains machine-readable artifacts supporting:
+## Repository Purpose
 
-- **Simulation AI-Powered Policies (SAPP)**
-- **Access Policy-on-Demand (PoD) runtime governance**
-- **Compliance Star Certificate (CSC)** schema and scoring support files
+This repository provides a versioned, inspectable framework for structured professional reasoning about the use of AI in governance, risk, and standards-adjacent contexts. It is published to support transparent review and discussion without asserting compliance, certification, regulatory interpretation, or implementation guidance.
 
-These artifacts are provided for:
+---
 
-- standards exploration and technical review
-- research and comparative analysis
-- implementation study and interoperability discussion
+## Mapping to Normative Standards (Clarifying Statement)
 
-They are **not a certification program** and do **not** constitute regulatory guidance or legal advice.
+Unlike normative standards documents, which define mandatory requirements or conformance criteria, this repository provides a non-normative reasoning framework intended to make governance intent, boundaries, and accountability explicit for professional judgment and discussion, without asserting obligations, compliance thresholds, or implementation rules.
 
-------------------------------------------------------------
+---
 
-Folder Structure
+## What This Framework Is
 
-schemas/
-  JSON schemas used to validate certificates and catalogs.
+This repository provides a **layered, governance-grade framework** for working with AI
+across the full lifecycle of governance work:
 
-catalogs/
-  Metric catalogs used by CSC scoring and telemetry mapping.
+- framing intent and accountability  
+- defining scope and boundaries  
+- anchoring reasoning to authoritative references  
+- producing neutral, defensible governance artifacts  
+- reasoning about execution and runtime evidence  
+- sustaining professional practice as standards evolve  
 
-profiles/
-  Sector weighting profiles and gate thresholds.
+The framework is authored in Markdown (`.md`) to support:
+- inspectability  
+- version control  
+- standards-adjacent review  
+- future machine-readable alignment  
 
-examples/
-  Example certificates and sample artifacts for integration testing.
+---
 
-docs/
-  Supporting PDF documentation and instructions.
+## What This Framework Is Not
 
-_future_extensions/
-  Reserved for Version B (architecture-specific extensions, e.g., Q-Pathformer + UGCCMT).
+This repository is **not**:
+- a compliance checklist  
+- a certification or accreditation scheme  
+- a legal or regulatory interpretation  
+- a tooling or platform implementation guide  
+- a substitute for professional judgment  
 
-------------------------------------------------------------
+Use of this framework does not imply compliance, approval, or endorsement
+by any regulator, standards body, or organization.
 
-Included Artifacts (Version A)
+---
 
-- **CSC certificate schema** (csc-certificate.schema_v1a.json)
-- **CSC metric catalog schema** (csc_metric_catalog_schema_v1a.json)
-- **CSC metric catalog** (csc_metric_catalog_v1a.json)
-- **CSC sector profiles** (csc_sector_profiles_v1a.json)
-- **Example CSC certificate** (example_csc_certificate_v1a.json)
-- **Access PoD JSON Instructions PDF** (docs/Access_PoD_JSON_Instructions_v1a.pdf)
-- **Version A publication PDF**:
-  APOD-TR-002_A-WEB-of-Sharing-Trust-Responsibility_Vol2_Version-A_Public-Review.pdf
-- **Pack manifest** (manifest_v1a_pack.json) — includes integrity hashes
+## How to Use This Repository
 
-------------------------------------------------------------
+The framework consists of **six modules**, each following the same internal structure.
 
-Integrity and Versioning
+Each module uses **HASH KEYs (1–10)** to denote ordered governance anchors.
 
-Releases include a **pack manifest file** (manifest_v1a_pack.json) that enumerates all normative artifacts and their associated **SHA-256 checksums**.
+> HASH KEYs progress from intent (1) to execution boundaries (10) and may be  
+> mapped to structured governance artifacts in advanced practice.
 
-Integrity verification must be performed against the **artifact pack ZIP** and the hashes listed in the embedded manifest.
+Participants are encouraged to:
+- complete modules selectively,  
+- leave sections blank where not applicable, and  
+- use the framework as a *thinking scaffold*, not a form to fill.
 
-The **v1a release is anchored to a tagged commit**. Subsequent commits on the main branch are **non-normative** and are intended only for clarification, documentation improvements, or preparation for future revisions (e.g., v1b).
+### About the HASH KEY 1–10 Progression
 
-Normative scope for **Version A** is defined **exclusively** by the artifact pack and its manifest.
+Each module is structured around **HASH KEYs (1–10)**, which represent an ordered
+governance thinking progression:
 
-Do **not** change the meaning of an existing metric_id.  
-If a change in semantics is required, deprecate the existing identifier and introduce a new metric_id.
+- **HASH KEY 1–3** focus on purpose, role, and authority  
+- **HASH KEY 4–6** surface assumptions, risks, and non-delegable boundaries  
+- **HASH KEY 7–8** apply pressure through exercises and case prompts  
+- **HASH KEY 9–10** consolidate reflection and execution readiness  
 
-Version A artifacts are intended to remain **stable for the duration of the public review cycle**.  
-Version B and later revisions must extend functionality via the _future_extensions/ directory **without modifying Version A artifacts**.
+Each HASH KEY is framed as a **question or prompt**.  
+The intent is not to produce a “correct” answer, but to **articulate your current
+position clearly and defensibly**.
 
-------------------------------------------------------------
+Participants are expected to:
+- write an answer **below each HASH KEY prompt where relevant**,  
+- leave sections blank where a prompt does not apply, and  
+- revise earlier answers as understanding deepens across modules.
 
-Source Archives and Verified Packs
+Responses may be brief, partial, or provisional; the goal is defensible articulation, not completeness.
 
-**GitHub-generated source archives (ZIP / TAR.GZ) are provided for convenience only and are not normative.**  
-They must **not** be relied upon for validation or integrity checking.
+HASH KEYs are **thinking anchors**, not checklist items.  
+Progression through 1–10 reflects increasing clarity and accountability, not
+completion or maturity.
 
-For verified distributions, reviewers should **use release assets that include a pack ZIP and published SHA-256 hashes** (e.g., access-pod-artifacts-v1a-pack.zip).
+### Modules
 
-------------------------------------------------------------
+1. **module_01_governance_ai_identity.md**
+   Identity, authorship, and accountability
 
-Contact / Feedback
+2. **module_02_intent_scope_boundaries.md** 
+   Governance intent, scope, and exclusions
 
-This pack supports a public review process.  
-Feedback should focus on:
+3. **module_03_governance_rag_references.md** 
+   Reference discipline and governance-grade RAG
 
-- clarity and interpretability
-- interoperability
-- alignment with standards-oriented governance
+4. **module_04_writing_governance_artifacts.md** 
+   Neutral, defensible governance writing
 
-------------------------------------------------------------
+5. **module_05_access_pod_lens.md** 
+   Execution-aware governance (conceptual)
 
-License
+6. **module_06_forward_practice_reflection.md** 
+   Forward practice and standards evolution
 
-These artifacts are released under the **MIT License** to support standards exploration, research review, and implementation study.
+---
 
-Use of these materials does **not** imply certification, endorsement, or regulatory approval.
+## Relationship to Workshops
+
+This repository represents the **public, inspectable framework**.
+
+Learning occurs most effectively through **facilitated workshops**, where:
+- boundaries are tested under pressure,  
+- assumptions are surfaced and challenged, and  
+- professional accountability is rehearsed in real time.
+
+The workshop is not required to read or reference this repository.  
+The repository is not sufficient, on its own, to replace facilitated practice.
+
+---
+
+## Relationship to Access PoD
+ 
+This framework is **conceptually aligned** with the **Access PoD (Policy-on-Demand)** initiative.
+
+Access PoD is referenced **as a governance lens**, not as a required platform
+or implementation dependency.
+
+The framework remains:
+- architecture-agnostic  
+- model-neutral  
+- tool-independent  
+
+---
+
+## Status and Evolution
+
+This repository is published as a **living governance framework**.
+
+- Content may evolve based on use, feedback, and standards development  
+- Changes are versioned transparently  
+- Stability of structure is prioritized over novelty  
+
+Contributions may be discussed, but inclusion is at the discretion of the author
+to preserve conceptual integrity.
+
+---
+
+## Author
+
+Anthony Siljeg  
+Founder, Alnotrea Labs  
+Creator of Q-Pathformer  
+Governance & Trust Systems Researcher  
+Affiliation: Policy of Developments — Access PoD
+
+---
+
+## License and Use
+
+This framework is provided for:
+- professional learning  
+- governance discussion  
+- standards exploration  
+
+It must not be represented as:
+- regulatory guidance,  
+- certification criteria, or  
+- a compliance determination.
+
+Use at your own professional discretion.

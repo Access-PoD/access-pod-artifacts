@@ -101,8 +101,14 @@ Feedback should focus on:
 
 ------------------------------------------------------------
 
-License
+## Licensing
 
-These artifacts are released under the **MIT License** to support standards exploration, research review, and implementation study.
+Earlier Access-PoD artifact releases were distributed under the **MIT License** to support standards exploration, research review, and implementation study.
 
-Use of these materials does **not** imply certification, endorsement, or regulatory approval.
+Beginning with the APOD-TR-007 dataset lifecycle release,
+Access-PoD publications are licensed under
+CC-BY-4.0 (SPDX: CC-BY-4.0).
+
+For details about licensing across the Access-PoD research series,
+see `LICENSE_HISTORY.md`.
+
